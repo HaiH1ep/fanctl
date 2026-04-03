@@ -48,7 +48,7 @@ func statusCommand() {
 
 // MARK: - Set Command
 
-func setCommand(fanIndex: Int, rpm: Float) {
+func setCommand(fanIndex: Int, rpm: Float, watchApps: [String] = []) {
     guard getuid() == 0 else {
         printError("Error: Setting fan speed requires root privileges.")
         printError("Run with: sudo fanctl set \(fanIndex) \(Int(rpm))")
@@ -74,6 +74,26 @@ func setCommand(fanIndex: Int, rpm: Float) {
 
         try writer.setFanSpeed(fanIndex: fanIndex, rpm: clampedRPM)
         print("Fan \(fanIndex) set to \(Int(clampedRPM)) RPM (manual mode)")
+
+        if !watchApps.isEmpty {
+            let store = ConfigStore()
+            var config = store.load()
+            for app in watchApps {
+                // Update existing rule or add new one
+                if let idx = config.rules.firstIndex(where: { $0.app.lowercased() == app.lowercased() && $0.fanIndex == fanIndex }) {
+                    config.rules[idx] = AppRule(app: app, fanIndex: fanIndex, rpm: clampedRPM)
+                } else {
+                    config.rules.append(AppRule(app: app, fanIndex: fanIndex, rpm: clampedRPM))
+                }
+            }
+            do {
+                try store.save(config)
+                print("Registered \(watchApps.count) app(s) for watch: \(watchApps.joined(separator: ", "))")
+            } catch {
+                printError("Warning: Could not save config: \(error.localizedDescription)")
+            }
+        }
+
         print("Run 'sudo fanctl reset' to return to automatic control.")
     } catch {
         printError("Error: \(error)")
@@ -160,6 +180,117 @@ func monitorCommand(interval: TimeInterval) {
     print("\nExiting monitor.")
 }
 
+// MARK: - List Command
+
+func listCommand() {
+    let config = ConfigStore().load()
+    if config.rules.isEmpty {
+        print("No app rules registered.")
+        print("Use 'sudo fanctl set <fan> <rpm> -w <app> ...' to register apps.")
+        return
+    }
+
+    print("Registered app rules:")
+    // Group by (fanIndex, rpm)
+    let grouped = Dictionary(grouping: config.rules) { "\($0.fanIndex):\(Int($0.rpm))" }
+    let sortedKeys = grouped.keys.sorted()
+    for key in sortedKeys {
+        guard let rules = grouped[key], let first = rules.first else { continue }
+        let apps = rules.map { $0.app }.joined(separator: ", ")
+        print("  Fan \(first.fanIndex)  \(Int(first.rpm)) RPM  <- \(apps)")
+    }
+}
+
+// MARK: - Unwatch Command
+
+func unwatchCommand(apps: [String]) {
+    let store = ConfigStore()
+    var config = store.load()
+    let before = config.rules.count
+    let appsLower = apps.map { $0.lowercased() }
+    config.rules.removeAll { rule in
+        appsLower.contains(rule.app.lowercased())
+    }
+    let removed = before - config.rules.count
+    do {
+        try store.save(config)
+        print("Removed \(removed) rule(s) for: \(apps.joined(separator: ", "))")
+    } catch {
+        printError("Error: Could not save config: \(error.localizedDescription)")
+        exit(1)
+    }
+}
+
+// MARK: - Watch Command
+
+func watchCommand(interval: TimeInterval) {
+    guard getuid() == 0 else {
+        printError("Error: Watch mode requires root privileges.")
+        printError("Run with: sudo fanctl watch")
+        exit(1)
+    }
+
+    let store = ConfigStore()
+    let config = store.load()
+
+    if config.rules.isEmpty {
+        print("No app rules configured.")
+        print("Use 'sudo fanctl set <fan> <rpm> -w <app> ...' to register apps.")
+        return
+    }
+
+    do {
+        let writer = try FanWriteService()
+        var previousSpeeds: [Int: Float] = [:]
+        var managedFans = Set<Int>()
+
+        print("Watching \(config.rules.count) rule(s), polling every \(Int(interval))s (Ctrl-C to stop)...")
+
+        while shouldExit == 0 {
+            let active = ProcessDetector.activeRules(from: config.rules)
+            let desired = ProcessDetector.resolveDesiredSpeeds(from: active)
+
+            // Apply new or changed speeds
+            for (fan, rpm) in desired {
+                if previousSpeeds[fan] != rpm {
+                    let min = writer.minRPM(for: fan)
+                    let max = writer.maxRPM(for: fan)
+                    let clamped = Swift.min(Swift.max(rpm, min), max)
+                    do {
+                        try writer.setFanSpeed(fanIndex: fan, rpm: clamped)
+                        let apps = active.filter { $0.fanIndex == fan }.map { $0.app }
+                        print("Fan \(fan) -> \(Int(clamped)) RPM (apps: \(apps.joined(separator: ", ")))")
+                    } catch {
+                        printError("Warning: Failed to set fan \(fan): \(error.localizedDescription)")
+                    }
+                    previousSpeeds[fan] = rpm
+                    managedFans.insert(fan)
+                }
+            }
+
+            // Reset fans that no longer have active rules
+            for fan in managedFans where desired[fan] == nil {
+                writer.resetFan(at: fan)
+                print("Fan \(fan) -> auto (no active apps)")
+                previousSpeeds.removeValue(forKey: fan)
+            }
+            managedFans = managedFans.intersection(desired.keys)
+
+            // Sleep in short intervals to stay responsive to SIGINT
+            for _ in 0..<Int(interval * 10) where shouldExit == 0 {
+                Thread.sleep(forTimeInterval: 0.1)
+            }
+        }
+
+        // On exit, reset all managed fans
+        writer.resetAllFans()
+        print("\nAll fans reset to automatic. Exiting watch.")
+    } catch {
+        printError("Error: \(error)")
+        exit(1)
+    }
+}
+
 // MARK: - Helpers
 
 func printUsage() {
@@ -170,12 +301,23 @@ func printUsage() {
       fanctl                     Show temperatures and fan speeds
       fanctl status              Same as above
       fanctl set <fan> <rpm>     Set fan to manual mode at given RPM (requires sudo)
+      fanctl set <fan> <rpm> -w <app1> [app2 ...]
+                                 Set fan speed and register apps for watch mode
+      fanctl list                Show registered app rules
+      fanctl unwatch <app1> [app2 ...]
+                                 Remove app rules
+      fanctl watch [interval]    Watch for registered apps and control fans (requires sudo)
       fanctl reset               Reset all fans to automatic (requires sudo)
       fanctl monitor [interval]  Live display, refreshing every N seconds (default: 2)
 
     Examples:
       fanctl                     Show current status
       sudo fanctl set 0 2000     Set fan 0 to 2000 RPM
+      sudo fanctl set 0 3000 -w code xcode
+                                 Set fan 0 and register code, xcode for watch
+      fanctl list                Show all registered app rules
+      fanctl unwatch code xcode  Remove rules for code and xcode
+      sudo fanctl watch          Watch for registered apps (polls every 5s)
       sudo fanctl reset          Reset all fans to auto
       fanctl monitor 1           Monitor with 1-second refresh
     """)

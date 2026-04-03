@@ -56,6 +56,12 @@ final class FanWriteService {
         try? smc.writeUInt8(FanKeys.forceTest, value: 0)
     }
 
+    // MARK: - Reset Single Fan
+
+    func resetFan(at index: Int) {
+        try? smc.writeUInt8(FanKeys.mode(index), value: 0)
+    }
+
     // MARK: - Fan Info
 
     func minRPM(for fanIndex: Int) -> Float {
