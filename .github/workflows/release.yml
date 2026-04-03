@@ -1,0 +1,39 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build
+        run: swift build -c release --arch arm64
+
+      - name: Strip binary
+        run: strip .build/release/fanctl
+
+      - name: Codesign
+        run: codesign --force --sign - .build/release/fanctl
+
+      - name: Package
+        run: |
+          mkdir -p dist
+          cp .build/release/fanctl dist/
+          cd dist && tar -czf fanctl-${{ github.ref_name }}-arm64-macos.tar.gz fanctl
+          shasum -a 256 fanctl-${{ github.ref_name }}-arm64-macos.tar.gz > fanctl-${{ github.ref_name }}-arm64-macos.tar.gz.sha256
+
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/fanctl-${{ github.ref_name }}-arm64-macos.tar.gz
+            dist/fanctl-${{ github.ref_name }}-arm64-macos.tar.gz.sha256
+          generate_release_notes: true

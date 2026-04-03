@@ -1,0 +1,596 @@
+{
+  "builtTestProducts" : [
+
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.SMCKit-arm64-apple-macosx26.0-release.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/sources",
+      "importPath" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/SMCKit/ChipIdentifier.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/SMCKit/SMCConnection.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/SMCKit/SMCDataConversion.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/SMCKit/SMCDiagnostic.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/SMCKit/SMCKeyMappings.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/SMCKit/SMCSensorReading.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/SMCKit/SMCSensorService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/SMCKit/SMCTypes.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "SMCKit",
+      "moduleOutputPath" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/Modules/SMCKit.swiftmodule",
+      "objects" : [
+        "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/ChipIdentifier.swift.o",
+        "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCConnection.swift.o",
+        "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCDataConversion.swift.o",
+        "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCDiagnostic.swift.o",
+        "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCKeyMappings.swift.o",
+        "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCSensorReading.swift.o",
+        "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCSensorService.swift.o",
+        "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCTypes.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx14.0",
+        "-whole-module-optimization",
+        "-num-threads",
+        "14",
+        "-serialize-diagnostics",
+        "-O",
+        "-j14",
+        "-DSWIFT_PACKAGE",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/include/SMCKit-Swift.h",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "fanctl"
+      ],
+      "outputFileMapPath" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/ChipIdentifier.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCConnection.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCDataConversion.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCDiagnostic.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCKeyMappings.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCSensorReading.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCSensorService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCTypes.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/Modules/SMCKit.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/SMCKit/ChipIdentifier.swift",
+        "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/SMCKit/SMCConnection.swift",
+        "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/SMCKit/SMCDataConversion.swift",
+        "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/SMCKit/SMCDiagnostic.swift",
+        "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/SMCKit/SMCKeyMappings.swift",
+        "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/SMCKit/SMCSensorReading.swift",
+        "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/SMCKit/SMCSensorService.swift",
+        "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/SMCKit/SMCTypes.swift"
+      ],
+      "tempsPath" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build",
+      "wholeModuleOptimization" : true
+    },
+    "C.fanctl-arm64-apple-macosx26.0-release.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/fanctl.build/sources",
+      "importPath" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/fanctl/Commands.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/fanctl/FanWriteService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/fanctl/main.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/Modules/SMCKit.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/fanctl.build/sources"
+        }
+      ],
+      "isLibrary" : false,
+      "moduleName" : "fanctl",
+      "moduleOutputPath" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/Modules/fanctl.swiftmodule",
+      "objects" : [
+        "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/fanctl.build/Commands.swift.o",
+        "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/fanctl.build/FanWriteService.swift.o",
+        "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/fanctl.build/main.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx14.0",
+        "-whole-module-optimization",
+        "-num-threads",
+        "14",
+        "-serialize-diagnostics",
+        "-O",
+        "-j14",
+        "-DSWIFT_PACKAGE",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/ModuleCache",
+        "-parseable-output",
+        "-Xfrontend",
+        "-entry-point-function-name",
+        "-Xfrontend",
+        "fanctl_main",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "fanctl"
+      ],
+      "outputFileMapPath" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/fanctl.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/fanctl.build/Commands.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/fanctl.build/FanWriteService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/fanctl.build/main.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/Modules/fanctl.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/fanctl/Commands.swift",
+        "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/fanctl/FanWriteService.swift",
+        "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/fanctl/main.swift"
+      ],
+      "tempsPath" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/fanctl.build",
+      "wholeModuleOptimization" : true
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "SMCKit" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "SMCKit",
+      "-package-name",
+      "fanctl",
+      "-c",
+      "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/SMCKit/ChipIdentifier.swift",
+      "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/SMCKit/SMCConnection.swift",
+      "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/SMCKit/SMCDataConversion.swift",
+      "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/SMCKit/SMCDiagnostic.swift",
+      "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/SMCKit/SMCKeyMappings.swift",
+      "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/SMCKit/SMCSensorReading.swift",
+      "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/SMCKit/SMCSensorService.swift",
+      "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/SMCKit/SMCTypes.swift",
+      "-I",
+      "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/Modules",
+      "-target",
+      "arm64-apple-macosx14.0",
+      "-whole-module-optimization",
+      "-num-threads",
+      "14",
+      "-serialize-diagnostics",
+      "-O",
+      "-j14",
+      "-DSWIFT_PACKAGE",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/include/SMCKit-Swift.h",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "fanctl",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "fanctl" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "fanctl",
+      "-package-name",
+      "fanctl",
+      "-c",
+      "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/fanctl/Commands.swift",
+      "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/fanctl/FanWriteService.swift",
+      "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/fanctl/main.swift",
+      "-I",
+      "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/Modules",
+      "-target",
+      "arm64-apple-macosx14.0",
+      "-whole-module-optimization",
+      "-num-threads",
+      "14",
+      "-serialize-diagnostics",
+      "-O",
+      "-j14",
+      "-DSWIFT_PACKAGE",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/ModuleCache",
+      "-parseable-output",
+      "-Xfrontend",
+      "-entry-point-function-name",
+      "-Xfrontend",
+      "fanctl_main",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "fanctl",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "SMCKit" : [
+
+    ],
+    "fanctl" : [
+      "SMCKit"
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/SMCKit/ChipIdentifier.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/SMCKit/SMCConnection.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/SMCKit/SMCDataConversion.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/SMCKit/SMCDiagnostic.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/SMCKit/SMCKeyMappings.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/SMCKit/SMCSensorReading.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/SMCKit/SMCSensorService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/SMCKit/SMCTypes.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/sources"
+    },
+    "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/fanctl.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/fanctl/Commands.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/fanctl/FanWriteService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/fanctl/main.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/fanctl.build/sources"
+    },
+    "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/fanctl.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/ChipIdentifier.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCConnection.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCDataConversion.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCDiagnostic.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCKeyMappings.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCSensorReading.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCSensorService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCTypes.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/fanctl.build/Commands.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/fanctl.build/FanWriteService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/fanctl.build/main.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/fanctl.product/Objects.LinkFileList"
+    },
+    "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt"
+    }
+  }
+}

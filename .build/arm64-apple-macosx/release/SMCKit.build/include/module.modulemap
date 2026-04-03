@@ -1,0 +1,3 @@
+module SMCKit {
+    header "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/include/SMCKit-Swift.h"
+}

@@ -1,0 +1,25 @@
+{
+  "": {
+    "dependencies": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/fanctl.build/fanctl.d",
+    "object": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/fanctl.build/fanctl.o",
+    "swift-dependencies": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/fanctl.build/master.swiftdeps"
+  },
+  "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/fanctl/Commands.swift": {
+    "object": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/fanctl.build/Commands.swift.o",
+    "swiftmodule": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/fanctl.build/Commands~partial.swiftmodule",
+    "swift-dependencies": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/fanctl.build/Commands.swiftdeps",
+    "diagnostics": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/fanctl.build/Commands.dia"
+  },
+  "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/fanctl/FanWriteService.swift": {
+    "object": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/fanctl.build/FanWriteService.swift.o",
+    "swiftmodule": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/fanctl.build/FanWriteService~partial.swiftmodule",
+    "swift-dependencies": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/fanctl.build/FanWriteService.swiftdeps",
+    "diagnostics": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/fanctl.build/FanWriteService.dia"
+  },
+  "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/fanctl/main.swift": {
+    "object": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/fanctl.build/main.swift.o",
+    "swiftmodule": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/fanctl.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/fanctl.build/main.swiftdeps",
+    "diagnostics": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/fanctl.build/main.dia"
+  }
+}

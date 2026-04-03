@@ -1,0 +1,55 @@
+{
+  "": {
+    "dependencies": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCKit.d",
+    "object": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCKit.o",
+    "swift-dependencies": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/master.swiftdeps"
+  },
+  "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/SMCKit/ChipIdentifier.swift": {
+    "object": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/ChipIdentifier.swift.o",
+    "swiftmodule": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/ChipIdentifier~partial.swiftmodule",
+    "swift-dependencies": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/ChipIdentifier.swiftdeps",
+    "diagnostics": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/ChipIdentifier.dia"
+  },
+  "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/SMCKit/SMCConnection.swift": {
+    "object": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCConnection.swift.o",
+    "swiftmodule": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCConnection~partial.swiftmodule",
+    "swift-dependencies": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCConnection.swiftdeps",
+    "diagnostics": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCConnection.dia"
+  },
+  "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/SMCKit/SMCDataConversion.swift": {
+    "object": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCDataConversion.swift.o",
+    "swiftmodule": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCDataConversion~partial.swiftmodule",
+    "swift-dependencies": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCDataConversion.swiftdeps",
+    "diagnostics": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCDataConversion.dia"
+  },
+  "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/SMCKit/SMCDiagnostic.swift": {
+    "object": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCDiagnostic.swift.o",
+    "swiftmodule": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCDiagnostic~partial.swiftmodule",
+    "swift-dependencies": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCDiagnostic.swiftdeps",
+    "diagnostics": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCDiagnostic.dia"
+  },
+  "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/SMCKit/SMCKeyMappings.swift": {
+    "object": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCKeyMappings.swift.o",
+    "swiftmodule": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCKeyMappings~partial.swiftmodule",
+    "swift-dependencies": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCKeyMappings.swiftdeps",
+    "diagnostics": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCKeyMappings.dia"
+  },
+  "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/SMCKit/SMCSensorReading.swift": {
+    "object": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCSensorReading.swift.o",
+    "swiftmodule": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCSensorReading~partial.swiftmodule",
+    "swift-dependencies": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCSensorReading.swiftdeps",
+    "diagnostics": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCSensorReading.dia"
+  },
+  "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/SMCKit/SMCSensorService.swift": {
+    "object": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCSensorService.swift.o",
+    "swiftmodule": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCSensorService~partial.swiftmodule",
+    "swift-dependencies": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCSensorService.swiftdeps",
+    "diagnostics": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCSensorService.dia"
+  },
+  "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/Sources/SMCKit/SMCTypes.swift": {
+    "object": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCTypes.swift.o",
+    "swiftmodule": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCTypes~partial.swiftmodule",
+    "swift-dependencies": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCTypes.swiftdeps",
+    "diagnostics": "/Users/haihiepnguyen/StartUp/macos_apps/fanctl/.build/arm64-apple-macosx/release/SMCKit.build/SMCTypes.dia"
+  }
+}
