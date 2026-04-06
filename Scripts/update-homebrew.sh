@@ -7,7 +7,7 @@ set -euo pipefail
 VERSION="${1:?Usage: $0 <version-tag>}"
 VERSION_NUM="${VERSION#v}"
 
-TARBALL_URL="https://github.com/haihiepnguyen/fanctl/releases/download/${VERSION}/fanctl-${VERSION}-arm64-macos.tar.gz"
+TARBALL_URL="https://github.com/HaiH1ep/fanctl/releases/download/${VERSION}/fanctl-${VERSION}-arm64-macos.tar.gz"
 
 echo "Downloading tarball to compute sha256..."
 SHA256=$(curl -sL "$TARBALL_URL" | shasum -a 256 | awk '{print $1}')
