@@ -9,7 +9,6 @@ struct AppRule: Codable, Equatable {
 }
 
 struct AppConfig: Codable {
-    var version: Int = 1
     var rules: [AppRule] = []
 }
 
@@ -44,6 +43,15 @@ final class ConfigStore {
         encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
         let data = try encoder.encode(config)
         try data.write(to: url, options: .atomic)
+        // When running under sudo, restore ownership to the real user so
+        // non-root commands (list, unwatch) can write the file later.
+        if let sudoUser = ProcessInfo.processInfo.environment["SUDO_USER"],
+           let pw = getpwnam(sudoUser) {
+            let uid = pw.pointee.pw_uid
+            let gid = pw.pointee.pw_gid
+            chown(url.path, uid, gid)
+            chown(dir.path, uid, gid)
+        }
     }
 
     // MARK: - Helpers

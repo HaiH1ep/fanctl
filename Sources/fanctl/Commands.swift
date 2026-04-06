@@ -231,9 +231,8 @@ func watchCommand(interval: TimeInterval) {
     }
 
     let store = ConfigStore()
-    let config = store.load()
 
-    if config.rules.isEmpty {
+    if store.load().rules.isEmpty {
         print("No app rules configured.")
         print("Use 'sudo fanctl set <fan> <rpm> -w <app> ...' to register apps.")
         return
@@ -244,9 +243,12 @@ func watchCommand(interval: TimeInterval) {
         var previousSpeeds: [Int: Float] = [:]
         var managedFans = Set<Int>()
 
-        print("Watching \(config.rules.count) rule(s), polling every \(Int(interval))s (Ctrl-C to stop)...")
+        print("Watching for registered apps, polling every \(Int(interval))s (Ctrl-C to stop)...")
 
         while shouldExit == 0 {
+            // Reload config each iteration so rules added/removed while
+            // watch is running are picked up without restarting.
+            let config = store.load()
             let active = ProcessDetector.activeRules(from: config.rules)
             let desired = ProcessDetector.resolveDesiredSpeeds(from: active)
 
@@ -305,7 +307,7 @@ func printUsage() {
                                  Set fan speed and register apps for watch mode
       fanctl list                Show registered app rules
       fanctl unwatch <app1> [app2 ...]
-                                 Remove app rules
+                                 Remove app rules (all fans)
       fanctl watch [interval]    Watch for registered apps and control fans (requires sudo)
       fanctl reset               Reset all fans to automatic (requires sudo)
       fanctl monitor [interval]  Live display, refreshing every N seconds (default: 2)

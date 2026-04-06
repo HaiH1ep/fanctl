@@ -32,12 +32,15 @@ enum ProcessDetector {
         return names
     }
 
-    /// Returns rules whose app name matches a currently running process (case-insensitive substring).
+    /// Returns rules whose app name matches a currently running process.
+    /// Matching strategy: exact match first, then prefix match to handle
+    /// truncated or compound names (e.g. "code" matches "code helper").
+    /// Avoids false positives from pure substring matching.
     static func activeRules(from rules: [AppRule]) -> [AppRule] {
         let running = runningProcessNames()
         return rules.filter { rule in
             let appLower = rule.app.lowercased()
-            return running.contains { $0.contains(appLower) }
+            return running.contains(appLower) || running.contains { $0.hasPrefix(appLower) }
         }
     }
 
