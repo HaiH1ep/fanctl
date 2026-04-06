@@ -5,7 +5,7 @@ A command-line tool for controlling Apple Silicon Mac fan speeds.
 ## Install
 
 ```bash
-brew install haihiepnguyen/tap/fanctl
+brew install HaiH1ep/fanctl/fanctl
 ```
 
 Or build from source:
